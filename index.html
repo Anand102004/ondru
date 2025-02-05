@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritambhara Logistics</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Custom Styles */
+        .navbar-custom {
+            background-color: #fffff !important; /* Orange color for navbar */
+        }
+        .navbar-custom .navbar-brand, .navbar-custom .nav-link {
+            color: black;
+        }
+        .navbar-custom .nav-link:hover {
+            color: orange;
+        }
+        .service-box img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .service-box {
+            position: relative;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .service-box:hover img {
+            transform: scale(1.1);
+        }
+        .service-box .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+        .footer-links a, .social-icons a {
+            color: white;
+            margin: 0 10px;
+        }
+        .footer-links a:hover, .social-icons a:hover {
+            color: #ff6600;
+        }
+        .description {
+            background-color: #000000;
+            padding: 50px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .description h3 {
+            color: #000000;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .description p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .description ul {
+            list-style: none;
+            padding: 0;
+            font-size: 16px;
+            color: #555;
+        }
+        .description ul li {
+            margin-bottom: 10px;
+        }
+        .service-box a {
+            display: block;
+            text-decoration: none;
+        }
+        /* Hover ship/boat effect */
+        .service-box:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+        .service-box:hover .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+ .enquiry-btn {
+            background-color: #f0a500;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .enquiry-btn:hover {
+            background-color: #d48c00;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="logo.png" alt="Logo" class="logo me-2"> Ritambhara Logistics
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact US</a></li>
+<a href="#" class="enquiry-btn">Enquiry Now</a>
+                                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Image Slider -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="slide2.png" class="d-block w-100" alt="Warehouse">
+            </div>
+            <div class="carousel-item">
+                <img src="slide3.jpg" class="d-block w-100" alt="Logistics">
+            </div>
+            <div class="carousel-item">
+                <img src="slide1.jpg" class="d-block w-100" alt="Transportation">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <section class="about-section">
+        <div class="container">
+            <h2>About Ritambhara Port Logistics</h2>
+            <p>Ritambhara Port Logistics, an offshoot of PSTS Group, specializes in Break Bulk cargo handling, offering comprehensive solutions for Steel, Project Cargo, Automotive, DG Goods, and more.Backed by the 84+ years of legacy of PSTS Logistics, Ritambhara ensures operational excellence with a team of 300+ skilled professionals, combining experience and innovation for seamless logistics operations.With a focus on customer delight, our expertise spans across Major and Private Ports, employing an Asset Lite Model to optimize costs and efficiency.</p>
+            
+           
+            
+            <div class="highlights">
+                <div class="highlight-box">
+                    <i class="fas fa-ship"></i>
+                    <h4>Expertise in Port Logistics</h4>
+                    <p>Decades of experience in handling cargo across Indian ports.</p>
+                </div>
+                <div class="highlight-box">
+                    <i class="fas fa-award"></i>
+                    <h4>Award-Winning Services</h4>
+                    <p>Recipient of the 'Stevedore of the Year' award for five consecutive years.</p>
+                </div>
+                <div class="highlight-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Innovative & Agile</h4>
+                    <p>Blending traditional wisdom with modern efficiency for optimized logistics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        .services-section {
+            background: #fff;
+            padding: 60px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .services-section h2 {
+            font-size: 32px;
+            color: #004085;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .service-box {
+            width: 150px;
+            height: 150px;
+            background: #e9ecef;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .service-box img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+        .service-box:hover img {
+            opacity: 0.8;
+        }
+        .service-box i {
+            font-size: 32px;
+            color: #004085;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        .service-box h4 {
+            font-size: 14px;
+            color: #333;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <style>
+    .services-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .service-box {
+        text-align: center;
+        width: 220px; /* Adjust width for better spacing */
+        padding: 20px;
+    }
+
+    .icon-container {
+        width: 100px;  /* Increase size of the circle */
+        height: 100px;
+        background-color: #f0f0f0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px auto;
+    }
+
+    .service-box i {
+        font-size: 50px; /* Increase icon size */
+        color: black;
+    }
+</style>
+
+<div class="container text-center">
+    <h1 class="mt-4 mb-3">Lets Explore!</h1>
+    <div class="row">
+        <div class="col-md-8 offset-md-2 map-container">
+            <img src="map.png" alt="World Map" class="img-fluid world-map">
+        </div>
+    </div>
+</div>
+
+ <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .about-section {
+            background: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .about-section h2 {
+            font-size: 32px;
+            color: #004085;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .about-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .highlights {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .highlight-box {
+            background: #e9ecef;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+        .highlight-box i {
+            font-size: 40px;
+            color: #004085;
+            margin-bottom: 10px;
+        }
+        .highlight-box h4 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .section-description {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service-container {
+            position: relative;
+            width: 180px; /* Adjusted width */
+            height: 180px;
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            background: #fff;
+            padding-bottom: 10px;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 165, 0, 0.9);
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: bottom 0.5s ease-in-out;
+            padding: 10px;
+        }
+
+        /* Hover Effect */
+        .service-container:hover .overlay {
+            bottom: 0;
+        }
+
+        .service-container:hover .service-image {
+            transform: scale(1.1);
+        }
+
+        .service-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 8px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Find Your Services</h2>
+            <p class="section-description">
+                Explore some of the best services from around the world from our partners and friends.
+            </p>
+
+            <div class="services-grid">
+                <a href="of.html">
+    <div class="service-container">
+        <img src="s.jpg" alt="Advanced Warehouse Management" class="service-image">
+        <div class="overlay">Reliable | High Quality | Efficient</div>
+        <div class="service-name">Advanced Warehouse</div>
+    </div>
+</a>
+
+             <a href="of.html">
+    <div class="service-container">
+        <img src="hire.png" alt="Advanced Warehouse Management" class="service-image">
+        <div class="overlay">Reliable | High Quality | Efficient</div>
+        <div class="service-name">Advanced Warehouse</div>
+    </div>
+</a>
+     <a href="of.html">
+    <div class="service-container">
+        <img src="ocean.jpg" alt="Advanced Warehouse Management" class="service-image">
+        <div class="overlay">Reliable | High Quality | Efficient</div>
+        <div class="service-name">Advanced Warehouse</div>
+    </div>
+</a>
+ <a href="of.html">
+    <div class="service-container">
+        <img src="pl.jpg" alt="Advanced Warehouse Management" class="service-image">
+        <div class="overlay">Reliable | High Quality | Efficient</div>
+        <div class="service-name">Advanced Warehouse</div>
+    </div>
+</a>
+ <a href="of.html">
+    <div class="service-container">
+        <img src="rail.png" alt="Advanced Warehouse Management" class="service-image">
+        <div class="overlay">Reliable | High Quality | Efficient</div>
+        <div class="service-name">Advanced Warehouse</div>
+    </div>
+</a>
+ <a href="of.html">
+    <div class="service-container">
+        <img src="l.jpg" alt="Advanced Warehouse Management" class="service-image">
+        <div class="overlay">Reliable | High Quality | Efficient</div>
+        <div class="service-name">Advanced Warehouse</div>
+    </div>
+</a>
+ <a href="of.html">
+    <div class="service-container">
+        <img src="ph.jpg" alt="Advanced Warehouse Management" class="service-image">
+        <div class="overlay">Reliable | High Quality | Efficient</div>
+        <div class="service-name">Advanced Warehouse</div>
+    </div>
+</a>
+ <a href="of.html">
+    <div class="service-container">
+        <img src="off.jpg" alt="Advanced Warehouse Management" class="service-image">
+        <div class="overlay">Reliable | High Quality | Efficient</div>
+        <div class="service-name">Advanced Warehouse</div>
+    </div>
+</a>
+ <a href="of.html">
+    <div class="service-container">
+        <img src="road.png" alt="Advanced Warehouse Management" class="service-image">
+        <div class="overlay">Reliable | High Quality | Efficient</div>
+        <div class="service-name">Advanced Warehouse</div>
+    </div>
+</a>
+ <a href="of.html">
+    <div class="service-container">
+        <img src="k.jpg" alt="Advanced Warehouse Management" class="service-image">
+        <div class="overlay">Reliable | High Quality | Efficient</div>
+        <div class="service-name">Advanced Warehouse</div>
+    </div>
+</a>
+ <a href="of.html">
+    <div class="service-container">
+        <img src="w.png" alt="Advanced Warehouse Management" class="service-image">
+        <div class="overlay">Reliable | High Quality | Efficient</div>
+        <div class="service-name">Advanced Warehouse</div>
+    </div>
+</a>
+ <a href="of.html">
+    <div class="service-container">
+        <img src="sl.jpg" alt="Advanced Warehouse Management" class="service-image">
+        <div class="overlay">Reliable | High Quality | Efficient</div>
+        <div class="service-name">Advanced Warehouse</div>
+    </div>
+</a>
+
+      
+            </div>
+        </div>
+    </section>
+
+<!-- Description Section -->
+<section class="description">
+    <div class="container">
+        <h3 class="text-center fade-in">Why Choose Ritambara Logistics?</h3>
+        <p class="text-center fade-in">Our logistics solutions are tailored to meet the evolving demands of businesses worldwide. By leveraging advanced technology, an experienced workforce, and a commitment to excellence, we ensure seamless, efficient, and cost-effective supply chain management.</p>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="info-box slide-up">
+                    <i class="fas fa-globe"></i>
+                    <h4>Global Freight Solutions</h4>
+                    <p>Our expertise in international trade logistics ensures smooth and efficient movement of goods across borders with minimal delays.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box slide-up">
+                    <i class="fas fa-boxes"></i>
+                    <h4>Warehouse Management</h4>
+                    <p>We offer state-of-the-art warehousing solutions, including inventory tracking, automated handling, and temperature-controlled storage.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box slide-up">
+                    <i class="fas fa-truck"></i>
+                    <h4>Last-Mile Delivery Excellence</h4>
+                    <p>With optimized delivery routes and real-time tracking, we ensure that your packages reach their destination safely and on time.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box slide-up">
+                    <i class="fas fa-recycle"></i>
+                    <h4>Sustainable Logistics</h4>
+                    <p>We commit to reduce carbon footprint through eco-friendly transportation methods & supply chain strategies.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box slide-up">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Data-Driven Optimization</h4>
+                    <p>Using AI-powered insights, we continuously improve our logistics processes to minimize costs and maximize efficiency for our clients.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box slide-up">
+                    <i class="fas fa-headset"></i>
+                    <h4>24/7 Customer Support</h4>
+                    <p>Our dedicated support team is always available to address your concerns and provide real-time updates on your shipments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Custom CSS -->
+<style>
+    .description {
+        background-color: #f8f9fa;
+        padding: 60px 0;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .description h3 {
+        color: #ff6600;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .info-box {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .info-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .info-box i {
+        font-size: 40px;
+        color: #ff6600;
+        margin-bottom: 15px;
+    }
+    
+    .info-box h4 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+    }
+    
+    .info-box p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    /* Animations */
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    .slide-up {
+        opacity: 0;
+        transform: translateY(50px);
+        animation: slideUp 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+        0% { opacity: 0; transform: translateY(50px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+.enquiry-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+            margin: 50px auto;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .enquiry-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: #f0a500;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #d4
+</style>
+
+
+ <section class="enquiry-section" id="enquiry">
+        <h2>Contact Us</h2>
+        <a href="#" class="contact-btn">Enquire Now</a>
+    </section>
+
+
+   <!-- Footer Section -->
+<footer class="footer">
+    <div class="container text-center">
+        <p class="fade-in">© 2024 Ritambara Logistics. All Rights Reserved.</p>
+
+        <div class="footer-links fade-in">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="social-icons fade-in">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- FontAwesome (Fix for Missing Icons) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+<!-- Custom CSS -->
+<style>
+    .footer {
+        background-color: #fff;
+        color: #fff;
+        padding: 30px 0;
+        font-size: 16px;
+    }
+
+    .footer-links {
+        margin-top: 10px;
+    }
+
+    .footer-links a {
+        color: black;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .footer-links a:hover {
+        color: #ff6600;
+    }
+
+    .social-icons {
+        margin-top: 15px;
+    }
+
+    .social-icons a {
+        color: #000000;
+        font-size: 24px;
+        margin: 0 10px;
+        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .social-icons a:hover {
+        color: #ff6600;
+        transform: scale(1.2);
+    }
+
+    /* Animations */
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+        color: black;
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
+
+</body>
+</html>
